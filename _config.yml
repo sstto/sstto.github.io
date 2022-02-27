@@ -20,7 +20,7 @@ title                    : "여행을 떠나다"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "오쯔의 블로그"
-description              : "hello" #"잠시나마 일상에서 벗어나 생각을 표현하고 유용한 지식을 알리고 싶어 만든 공간입니다."
+description              : "잠시나마 일상에서 벗어나 생각을 표현하고 유용한 지식을 알리고 싶어 만든 공간입니다."
 url                      : "https://sstto.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
