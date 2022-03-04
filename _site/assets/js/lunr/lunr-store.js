@@ -1,6 +1,6 @@
 var store = [{
-        "title": "J일지도 모르는 P의 여행",
-        "excerpt":"I have been having a lot of fun exploring choroplethr package created by   THis post  ","categories": ["travel"],
+        "title": "J일지도 모르는 P의 여행(시흥, 오이도편)",
+        "excerpt":"💡 **2022년 2월 28일부터 3월 1일까지 ** 여행기록입니다. 여행을 떠나며 방학동안 진행했던 기업인턴이 끝나니 어느새 방학이 끝나가고 있었습니다. 개강 전 마지막으로 허용된 자유를 만끽하기 위해 여행을 결심하였습니다. MBTI P형인 저는 J라고 주장하는 절친 SHB에게 여행을 계획하게 되었습니다. 카톡에서 보다시피 철저한 계획을 세우고 모든 변수에 대비하였습니다. (▲ SHB와의 카톡) 여행 목적지는...","categories": ["travel"],
         "tags": ["travel"],
         "url": "/travel/PtoJ/",
         "teaser": null
