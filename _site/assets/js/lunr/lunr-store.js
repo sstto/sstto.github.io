@@ -16,4 +16,16 @@ var store = [{
         "tags": ["OS","Study"],
         "url": "/os/proj0/",
         "teaser": null
+      },{
+        "title": "Proj0",
+        "excerpt":"💡 ** OS proj0 시스템 호출 추가하기** arch/arm64/include/asm/unistd.h #define __ARM_NR_compat_set_tls (__ARM_NR_COMPAT_BASE + 5) #define __ARM_NR_COMPAT_END (__ARM_NR_COMPAT_BASE + 0x800) /* 47 번째 줄 변경 */ #define __NR_compat_syscalls 400 #endif #define __ARCH_WANT_SYS_CLONE arch/arm64/include/asm/unistd32.h __SYSCALL(__NR_statx, sys_statx) #define __NR_rseq 398 /* 822 번째 줄 추가 */ __SYSCALL(__NR_rseq, sys_rseq) #define __NR_hello 399 __SYSCALL(__NR_hello, sys_hello) include/linux/syscalls.h...","categories": [],
+        "tags": [],
+        "url": "/proj0/",
+        "teaser": null
+      },{
+        "title": "Vim 단축키",
+        "excerpt":"💡 ** Vim 단축키 모음 ** 이동 기본 이동 h, j, k, l: 좌,하,상,우 커서 이동 -: 줄의 처음 위치로 커서 이동 gg: 맨 위로 커서 이동 [shift + g]: 맨 아래로 커서 이동 단어 단위로 이동 w: 단어의 시작 위치로 커서 이동 (forward 방향) Ex. 3w: 세 단어 앞으로...","categories": ["Vim"],
+        "tags": ["Vim","Tool"],
+        "url": "/vim/vim_edit/",
+        "teaser": null
       }]

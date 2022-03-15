@@ -1,0 +1,58 @@
+<p class="notice--success">💡 ** OS proj0 시스템 호출 추가하기**<br /></p>
+
+<h1 id="archarm64includeasmunistdh">arch/arm64/include/asm/unistd.h</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define __ARM_NR_compat_set_tls		(__ARM_NR_COMPAT_BASE + 5)
+#define __ARM_NR_COMPAT_END		(__ARM_NR_COMPAT_BASE + 0x800)
+</span>
+<span class="cm">/* 47 번째 줄 변경 */</span>
+<span class="cp">#define __NR_compat_syscalls		400
+#endif
+</span>
+<span class="cp">#define __ARCH_WANT_SYS_CLONE
+</span></code></pre></div></div>
+
+<h1 id="archarm64includeasmunistd32h">arch/arm64/include/asm/unistd32.h</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_statx</span><span class="p">,</span> <span class="n">sys_statx</span><span class="p">)</span>
+<span class="cp">#define __NR_rseq 398
+</span><span class="cm">/* 822 번째 줄 추가 */</span>
+<span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_rseq</span><span class="p">,</span> <span class="n">sys_rseq</span><span class="p">)</span>
+<span class="cp">#define __NR_hello 399
+</span><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_hello</span><span class="p">,</span> <span class="n">sys_hello</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="includelinuxsyscallsh">include/linux/syscalls.h</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>			  <span class="kt">unsigned</span> <span class="n">mask</span><span class="p">,</span> <span class="k">struct</span> <span class="n">statx</span> <span class="n">__user</span> <span class="o">*</span><span class="n">buffer</span><span class="p">);</span>
+<span class="n">asmlinkage</span> <span class="kt">long</span> <span class="nf">sys_rseq</span><span class="p">(</span><span class="k">struct</span> <span class="n">rseq</span> <span class="n">__user</span> <span class="o">*</span><span class="n">rseq</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">rseq_len</span><span class="p">,</span>
+			 <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">sig</span><span class="p">);</span>
+<span class="cm">/* 909 번째 줄 추가 */</span>
+<span class="n">asmlinkage</span> <span class="kt">long</span> <span class="nf">sys_hello</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+</code></pre></div></div>
+
+<h1 id="includeuapiasm-genericunistdh">include/uapi/asm-generic/unistd.h</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define __NR_rseq 293
+</span><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_rseq</span><span class="p">,</span> <span class="n">sys_rseq</span><span class="p">)</span>
+
+<span class="cm">/* 740 번째 줄 추가 */</span>
+<span class="cp">#define __NR_hello 399
+</span><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_hello</span><span class="p">,</span> <span class="n">sys_hello</span><span class="p">)</span>
+
+<span class="cp">#undef __NR_syscalls
+#define __NR_syscalls 400
+</span></code></pre></div></div>
+
+<h1 id="kernelsysc">kernel/sys.c</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="err">}</span>
+
+<span class="cm">/* 2577 번째 줄 추가 */</span>
+<span class="n">SYSCALL_DEFINE0</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="k">static</span> <span class="kt">int</span> <span class="n">num_called</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="n">printk</span><span class="p">(</span><span class="s">"Hello, this is syscall by Youngin Sim! (%d)</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num_called</span><span class="o">++</span><span class="p">);</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="cp">#ifdef CONFIG_COMPAT
+</span><span class="k">struct</span> <span class="n">compat_sysinfo</span> <span class="p">{</span>
+	<span class="n">s32</span> <span class="n">uptime</span><span class="p">;</span>
+</code></pre></div></div>
