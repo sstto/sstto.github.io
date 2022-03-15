@@ -1,0 +1,13 @@
+I"6<p class="notice--success">💡 ** OS proj0 **<br /></p>
+
+<h1 id="archarm64includeasmunistdh">arch/arm64/include/asm/unistd.h</h1>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define __ARM_NR_compat_set_tls		(__ARM_NR_COMPAT_BASE + 5)
+#define __ARM_NR_COMPAT_END		(__ARM_NR_COMPAT_BASE + 0x800)
+</span>
+<span class="cm">/* 47 번째 줄 변경*/</span>
+<span class="cp">#define __NR_compat_syscalls		400
+#endif
+</span>
+<span class="cp">#define __ARCH_WANT_SYS_CLONE
+</span></code></pre></div></div>
+:ET
