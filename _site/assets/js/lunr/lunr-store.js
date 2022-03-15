@@ -17,10 +17,10 @@ var store = [{
         "url": "/os/proj0/",
         "teaser": null
       },{
-        "title": "Proj0",
-        "excerpt":"💡 ** OS proj0 시스템 호출 추가하기** arch/arm64/include/asm/unistd.h #define __ARM_NR_compat_set_tls (__ARM_NR_COMPAT_BASE + 5) #define __ARM_NR_COMPAT_END (__ARM_NR_COMPAT_BASE + 0x800) /* 47 번째 줄 변경 */ #define __NR_compat_syscalls 400 #endif #define __ARCH_WANT_SYS_CLONE arch/arm64/include/asm/unistd32.h __SYSCALL(__NR_statx, sys_statx) #define __NR_rseq 398 /* 822 번째 줄 추가 */ __SYSCALL(__NR_rseq, sys_rseq) #define __NR_hello 399 __SYSCALL(__NR_hello, sys_hello) include/linux/syscalls.h...","categories": [],
-        "tags": [],
-        "url": "/proj0/",
+        "title": "Operating System - tip : Kernel Debug using gdb",
+        "excerpt":"gdb 실행 (linux)&gt; gdb-multiarch ./vmlinux # we need a breakpoint (gdb)&gt; break __arm64_sys_hello # check out arch/arm64/include/asm/syscall_wrapper.h : 왜 __arm64_ 가 붙었는지 이해 가능 # remote 설정 (gdb)&gt; target remote localhost:1234 # qemu와 gdb가 붙는다. (gdb)&gt; run gdb debug 방법 # Debug하고 싶은 바이너리 실행 (root)&gt; ./test_hello # we hit...","categories": ["OS"],
+        "tags": ["OS","Tool"],
+        "url": "/os/kernel_debug/",
         "teaser": null
       },{
         "title": "Vim 단축키",

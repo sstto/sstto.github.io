@@ -1,0 +1,36 @@
+I"_<h1 id="gdb-실행">gdb 실행</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(linux)&gt; gdb-multiarch ./vmlinux
+# we need a breakpoint 
+(gdb)&gt; break __arm64_sys_hello
+# check out arch/arm64/include/asm/syscall_wrapper.h : 왜 __arm64_ 가 붙었는지 이해 가능
+# remote 설정
+(gdb)&gt; target remote localhost:1234
+# qemu와 gdb가 붙는다.
+(gdb)&gt; run 
+</code></pre></div></div>
+
+<h1 id="gdb-debug-방법">gdb debug 방법</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Debug하고 싶은 바이너리 실행
+(root)&gt; ./test_hello
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># we hit the break point
+# 어디 있는지 알고 싶으면...
+(gdb)&gt; win
+# 'n' is a command to execute line by line.
+(gdb)&gt; n
+# You can print symbolds' value in gdb.
+(gdb)&gt; print /s num_called 
+# "Next breakpoint"
+(gdb)&gt; continue
+</code></pre></div></div>
+
+<h1 id="gdb-종료-방법">gdb 종료 방법</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># stop showing the win window.
+(gdb)&gt; tui disable
+# remote debugging ended
+(gdb)&gt; detach
+(gdb)&gt; quit
+(linux)&gt; ...
+</code></pre></div></div>
+:ET

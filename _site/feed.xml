@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-15T13:56:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">여행을 떠나자</title><subtitle>잠시나마 일상에서 벗어나 생각을 표현하고 유용한 지식을 알리고 싶어 만든 공간입니다.</subtitle><author><name>Youngin Sim</name></author><entry><title type="html">Operating System - proj0 : Add SystemCall</title><link href="http://localhost:4000/os/proj0/" rel="alternate" type="text/html" title="Operating System - proj0 : Add SystemCall" /><published>2022-03-15T00:00:00+09:00</published><updated>2022-03-15T00:00:00+09:00</updated><id>http://localhost:4000/os/proj0</id><content type="html" xml:base="http://localhost:4000/os/proj0/"><![CDATA[<p class="notice--success">💡 ** OS proj0 시스템 호출 추가하기**<br /></p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-03-15T15:45:56+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">여행을 떠나자</title><subtitle>잠시나마 일상에서 벗어나 생각을 표현하고 유용한 지식을 알리고 싶어 만든 공간입니다.</subtitle><author><name>Youngin Sim</name></author><entry><title type="html">Operating System - proj0 : Add SystemCall</title><link href="http://localhost:4000/os/proj0/" rel="alternate" type="text/html" title="Operating System - proj0 : Add SystemCall" /><published>2022-03-15T00:00:00+09:00</published><updated>2022-03-15T00:00:00+09:00</updated><id>http://localhost:4000/os/proj0</id><content type="html" xml:base="http://localhost:4000/os/proj0/"><![CDATA[<p class="notice--success">💡 ** OS proj0 시스템 호출 추가하기**<br /></p>
 
 <h1 id="archarm64includeasmunistdh">arch/arm64/include/asm/unistd.h</h1>
 <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define __ARM_NR_compat_set_tls		(__ARM_NR_COMPAT_BASE + 5)
@@ -55,64 +55,41 @@
 <span class="cp">#ifdef CONFIG_COMPAT
 </span><span class="k">struct</span> <span class="n">compat_sysinfo</span> <span class="p">{</span>
 	<span class="n">s32</span> <span class="n">uptime</span><span class="p">;</span>
-</code></pre></div></div>]]></content><author><name>Youngin Sim</name></author><category term="OS" /><category term="OS" /><category term="Study" /><summary type="html"><![CDATA[💡 ** OS proj0 시스템 호출 추가하기**]]></summary></entry><entry><title type="html">Proj0</title><link href="http://localhost:4000/proj0/" rel="alternate" type="text/html" title="Proj0" /><published>2022-03-15T00:00:00+09:00</published><updated>2022-03-15T00:00:00+09:00</updated><id>http://localhost:4000/proj0</id><content type="html" xml:base="http://localhost:4000/proj0/"><![CDATA[<p class="notice--success">💡 ** OS proj0 시스템 호출 추가하기**<br /></p>
-
-<h1 id="archarm64includeasmunistdh">arch/arm64/include/asm/unistd.h</h1>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define __ARM_NR_compat_set_tls		(__ARM_NR_COMPAT_BASE + 5)
-#define __ARM_NR_COMPAT_END		(__ARM_NR_COMPAT_BASE + 0x800)
-</span>
-<span class="cm">/* 47 번째 줄 변경 */</span>
-<span class="cp">#define __NR_compat_syscalls		400
-#endif
-</span>
-<span class="cp">#define __ARCH_WANT_SYS_CLONE
-</span></code></pre></div></div>
-
-<h1 id="archarm64includeasmunistd32h">arch/arm64/include/asm/unistd32.h</h1>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_statx</span><span class="p">,</span> <span class="n">sys_statx</span><span class="p">)</span>
-<span class="cp">#define __NR_rseq 398
-</span><span class="cm">/* 822 번째 줄 추가 */</span>
-<span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_rseq</span><span class="p">,</span> <span class="n">sys_rseq</span><span class="p">)</span>
-<span class="cp">#define __NR_hello 399
-</span><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_hello</span><span class="p">,</span> <span class="n">sys_hello</span><span class="p">)</span>
+</code></pre></div></div>]]></content><author><name>Youngin Sim</name></author><category term="OS" /><category term="OS" /><category term="Study" /><summary type="html"><![CDATA[💡 ** OS proj0 시스템 호출 추가하기**]]></summary></entry><entry><title type="html">Operating System - tip : Kernel Debug using gdb</title><link href="http://localhost:4000/os/kernel_debug/" rel="alternate" type="text/html" title="Operating System - tip : Kernel Debug using gdb" /><published>2022-03-15T00:00:00+09:00</published><updated>2022-03-15T00:00:00+09:00</updated><id>http://localhost:4000/os/kernel_debug</id><content type="html" xml:base="http://localhost:4000/os/kernel_debug/"><![CDATA[<h1 id="gdb-실행">gdb 실행</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(linux)&gt; gdb-multiarch ./vmlinux
+# we need a breakpoint 
+(gdb)&gt; break __arm64_sys_hello
+# check out arch/arm64/include/asm/syscall_wrapper.h : 왜 __arm64_ 가 붙었는지 이해 가능
+# remote 설정
+(gdb)&gt; target remote localhost:1234
+# qemu와 gdb가 붙는다.
+(gdb)&gt; run 
 </code></pre></div></div>
 
-<h1 id="includelinuxsyscallsh">include/linux/syscalls.h</h1>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>			  <span class="kt">unsigned</span> <span class="n">mask</span><span class="p">,</span> <span class="k">struct</span> <span class="n">statx</span> <span class="n">__user</span> <span class="o">*</span><span class="n">buffer</span><span class="p">);</span>
-<span class="n">asmlinkage</span> <span class="kt">long</span> <span class="nf">sys_rseq</span><span class="p">(</span><span class="k">struct</span> <span class="n">rseq</span> <span class="n">__user</span> <span class="o">*</span><span class="n">rseq</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">rseq_len</span><span class="p">,</span>
-			 <span class="kt">int</span> <span class="n">flags</span><span class="p">,</span> <span class="kt">uint32_t</span> <span class="n">sig</span><span class="p">);</span>
-<span class="cm">/* 909 번째 줄 추가 */</span>
-<span class="n">asmlinkage</span> <span class="kt">long</span> <span class="nf">sys_hello</span><span class="p">(</span><span class="kt">void</span><span class="p">);</span>
+<h1 id="gdb-debug-방법">gdb debug 방법</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Debug하고 싶은 바이너리 실행
+(root)&gt; ./test_hello
 </code></pre></div></div>
 
-<h1 id="includeuapiasm-genericunistdh">include/uapi/asm-generic/unistd.h</h1>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#define __NR_rseq 293
-</span><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_rseq</span><span class="p">,</span> <span class="n">sys_rseq</span><span class="p">)</span>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># we hit the break point
+# 어디 있는지 알고 싶으면...
+(gdb)&gt; win
+# 'n' is a command to execute line by line.
+(gdb)&gt; n
+# You can print symbolds' value in gdb.
+(gdb)&gt; print /s num_called 
+# "Next breakpoint"
+(gdb)&gt; continue
+</code></pre></div></div>
 
-<span class="cm">/* 740 번째 줄 추가 */</span>
-<span class="cp">#define __NR_hello 399
-</span><span class="n">__SYSCALL</span><span class="p">(</span><span class="n">__NR_hello</span><span class="p">,</span> <span class="n">sys_hello</span><span class="p">)</span>
-
-<span class="cp">#undef __NR_syscalls
-#define __NR_syscalls 400
-</span></code></pre></div></div>
-
-<h1 id="kernelsysc">kernel/sys.c</h1>
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code>	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="err">}</span>
-
-<span class="cm">/* 2577 번째 줄 추가 */</span>
-<span class="n">SYSCALL_DEFINE0</span><span class="p">(</span><span class="n">hello</span><span class="p">)</span>
-<span class="p">{</span>
-	<span class="k">static</span> <span class="kt">int</span> <span class="n">num_called</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-	<span class="n">printk</span><span class="p">(</span><span class="s">"Hello, this is syscall by Youngin Sim! (%d)</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">num_called</span><span class="o">++</span><span class="p">);</span>
-	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="cp">#ifdef CONFIG_COMPAT
-</span><span class="k">struct</span> <span class="n">compat_sysinfo</span> <span class="p">{</span>
-	<span class="n">s32</span> <span class="n">uptime</span><span class="p">;</span>
-</code></pre></div></div>]]></content><author><name>Youngin Sim</name></author><summary type="html"><![CDATA[💡 ** OS proj0 시스템 호출 추가하기**]]></summary></entry><entry><title type="html">Vim 단축키</title><link href="http://localhost:4000/vim/vim_edit/" rel="alternate" type="text/html" title="Vim 단축키" /><published>2022-03-15T00:00:00+09:00</published><updated>2022-03-15T00:00:00+09:00</updated><id>http://localhost:4000/vim/vim_edit</id><content type="html" xml:base="http://localhost:4000/vim/vim_edit/"><![CDATA[<p class="notice--success">💡 ** Vim 단축키 모음 **<br /></p>
+<h1 id="gdb-종료-방법">gdb 종료 방법</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># stop showing the win window.
+(gdb)&gt; tui disable
+# remote debugging ended
+(gdb)&gt; detach
+(gdb)&gt; quit
+(linux)&gt; ...
+</code></pre></div></div>]]></content><author><name>Youngin Sim</name></author><category term="OS" /><category term="OS" /><category term="Tool" /><summary type="html"><![CDATA[gdb 실행 (linux)&gt; gdb-multiarch ./vmlinux # we need a breakpoint (gdb)&gt; break __arm64_sys_hello # check out arch/arm64/include/asm/syscall_wrapper.h : 왜 __arm64_ 가 붙었는지 이해 가능 # remote 설정 (gdb)&gt; target remote localhost:1234 # qemu와 gdb가 붙는다. (gdb)&gt; run]]></summary></entry><entry><title type="html">Vim 단축키</title><link href="http://localhost:4000/vim/vim_edit/" rel="alternate" type="text/html" title="Vim 단축키" /><published>2022-03-15T00:00:00+09:00</published><updated>2022-03-15T00:00:00+09:00</updated><id>http://localhost:4000/vim/vim_edit</id><content type="html" xml:base="http://localhost:4000/vim/vim_edit/"><![CDATA[<p class="notice--success">💡 ** Vim 단축키 모음 **<br /></p>
 
 <h1 id="이동">이동</h1>
 

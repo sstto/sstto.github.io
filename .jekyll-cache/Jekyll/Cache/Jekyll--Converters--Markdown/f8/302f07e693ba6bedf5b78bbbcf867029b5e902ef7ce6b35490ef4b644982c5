@@ -1,0 +1,12 @@
+I"<h1 id="gdb-실행">gdb 실행</h1>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># In Linux root dir
+(linux)&gt; gdb-multiarch ./vmlinux
+(linux)&gt; # we need a breakpoint
+(gdb)&gt; break __arm64_sys_hello
+(gdb)&gt; # check out arch/arm64/include/asm/syscall_wrapper.h : 왜 __arm64_ 가 붙었는지 이해 가능
+(gdb)&gt; # remote 설정
+(gdb)&gt; target remote localhost:1234
+(gdb)&gt; # qemu와 gdb가 붙는다.
+(gdb)&gt; run 
+</code></pre></div></div>
+:ET

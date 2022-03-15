@@ -621,7 +621,7 @@
       
   <nav class="pagination">
     
-      <a href="/proj0/" class="pagination--pager" title="Proj0
+      <a href="/os/kernel_debug/" class="pagination--pager" title="Operating System - tip : Kernel Debug using gdb
 ">이전</a>
     
     
@@ -649,7 +649,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/proj0/" rel="permalink">Proj0
+        <a href="/os/kernel_debug/" rel="permalink">Operating System - tip : Kernel Debug using gdb
 </a>
       
     </h2>
@@ -674,8 +674,11 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">💡 ** OS proj0 시스템 호출 추가하기**
-</p>
+    <p class="archive__item-excerpt" itemprop="description">gdb 실행
+(linux)&gt; gdb-multiarch ./vmlinux
+# we need a breakpoint 
+(gdb)&gt; break __arm64_sys_hello
+# check out arch/arm64/include/asm/syscall_wrapper.h : 왜...</p>
   </article>
 </div>
 
